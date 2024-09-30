@@ -1,0 +1,45 @@
+@import "../Typography/styles.module.scss";
+
+// ----------------------------------------------------------------------
+.control {
+  @apply h-40 font-opensans border-none bg-netural rounded-5 shadow-none #{!important};
+}
+
+.valueContainer {
+  @apply px-16 #{!important};
+}
+
+.placeholder {
+  @apply caption1 text-secondary #{!important};
+}
+
+.singleValue {
+  @apply body1 text-primary #{!important};
+}
+
+.option {
+  @apply font-montserrat text-13 leading-18 font-medium text-primary px-16 #{!important};
+}
+
+.selectedOption {
+  @apply bg-netural #{!important};
+}
+.focusedOption {
+  @apply bg-neutral-50 #{!important};
+}
+
+.menu {
+  @apply border-none outline-none py-4 shadow-md mt-4 #{!important};
+}
+
+.multiValue {
+  @apply bg-white rounded-3 m-0 mr-5 #{!important};
+
+  & > .multiValueLabel {
+    @apply caption2 text-primary;
+  }
+
+  & > .multiValueRemove:hover {
+    @apply bg-red-100 text-red-500;
+  }
+}

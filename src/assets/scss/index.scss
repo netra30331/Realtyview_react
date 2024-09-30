@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body {
+    @apply overflow-hidden font-arial font-normal bg-[#FAFAFA];
+
+    & * {
+      @apply ring-0 ring-transparent #{!important};
+    }
+  }
+}
+
+@layer components {
+  .heading1 {
+    @apply text-28 leading-36 font-semibold;
+  }
+
+  .heading2 {
+    @apply text-24 leading-32 font-semibold;
+  }
+
+  .heading3 {
+    @apply text-20 leading-28 font-semibold;
+  }
+
+  .heading4 {
+    @apply text-16 leading-24 font-semibold;
+  }
+
+  .body {
+    @apply text-16 leading-22 font-normal;
+  }
+
+  .caption {
+    @apply text-12 leading-20 font-normal;
+  }
+
+  .left-menu {
+    @apply text-14 leading-21 font-normal select-none;
+  }
+
+  .page-menu {
+    @apply text-14 leading-21 font-normal;
+  }
+
+  .table-headers {
+    @apply text-14 leading-21 font-semibold;
+  }
+
+  .table-row-content {
+    @apply text-14 leading-21 font-normal;
+  }
+
+  .button1 {
+    @apply text-14 leading-21 font-normal;
+  }
+
+  .button2 {
+    @apply text-12 leading-18 font-normal;
+  }
+
+  .medium-text {
+    @apply text-12 leading-16 font-normal;
+  }
+
+  .small-text {
+    @apply text-8 leading-12 font-normal;
+  }
+}
+
+.react-datepicker {
+  @apply px-2 py-3 border-none shadow-md #{!important};
+
+  & * {
+    @apply font-roboto text-11 font-medium text-[#595a5c] #{!important};
+  }
+
+  & .react-datepicker__navigation {
+    @apply top-4;
+  }
+
+  & .react-datepicker__header {
+    @apply bg-transparent border-none;
+
+    & .current-date-label {
+      @apply text-button-primary font-bold text-12 leading-14 #{!important};
+    }
+
+    & .react-datepicker__day-names {
+      @apply flex mx-0 gap-3 border-t-1 border-[#C8CBCF] py-4;
+
+      & * {
+        @apply text-primary #{!important};
+      }
+    }
+  }
+
+  & .react-datepicker__month-container {
+    @apply mb-4;
+
+    & .react-datepicker__month {
+      @apply m-0 border-b-1 border-[#C8CBCF];
+
+      & .react-datepicker__week {
+        @apply flex mx-0 gap-3 mb-4;
+
+        & .react-datepicker__day--selected {
+          @apply bg-button-primary text-white #{!important};
+        }
+
+        & .react-datepicker__day--outside-month {
+          @apply text-[#B2B5B8] #{!important};
+        }
+
+        & .react-datepicker__day--keyboard-selected {
+          @apply border-1 border-button-primary bg-white text-button-primary hover:bg-button-primary hover:text-white #{!important};
+        }
+      }
+    }
+  }
+
+  & .react-datepicker__today-button {
+    @apply w-12 bg-[#F1F5F9] py-1 hover:bg-button-primary-hover rounded-5 text-[#B2B5B8] hover:text-white mx-auto mb-2 border-none;
+    @apply text-[#B2B5B8] hover:text-white #{!important};
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.table {
+  @apply min-w-full divide-y divide-gray-300;
+
+  td {
+    @apply py-4;
+  }
+}
+
+.showing_table {
+  td {
+    @apply pl-4 pr-3;
+  }
+}
+
+.deny-btn {
+  background: rgba(193, 129, 147, 1);
+  color: rgba(179, 47, 67, 1);
+}
+
+.reschedule-btn {
+  background: rgba(255, 222, 102, 0.45);
+  color: rgba(24, 41, 82, 0.4);
+
+}
+
+.confirm-btn {
+  background: rgba(181, 226, 196, 1);
+  color: rgba(109, 161, 114, 1);
+}
+
+.react-calendar__tile--active {
+  background-color: #006edc !important;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 30%;
+  font-weight: 600;
+}
+
+.left {
+  left: -1rem;
+
+}
+
+.right {
+  right: -0rem;
+}
+
+.slick-slider {
+  padding-right: 1rem;
+}
+
+.custom-slider {
+  padding-right: 0;
+  .slick-list {
+    .slick-track {
+      display: flex;
+      gap: 8px
+    }
+  }
+}
+
+// React Toastify CSS
+.Toastify__toast {
+  --toastify-color-progress-light: #4C42D7;
+  --toastify-spinner-color: #4C42D7;
+}
+
+// React Calender CSS
+.react-calendar__viewContainer {
+  width: 255px;
+}
+
+.react-calendar__navigation {
+  @apply flex items-center mb-0;
+
+  .react-calendar__navigation__arrow {
+    @apply rounded-full h-[28px] min-w-[30px] transition;
+  }
+
+  .react-calendar__navigation__label {
+    @apply rounded-5 transition p-1;
+  }
+
+  .react-calendar__navigation__arrow:hover,
+  .react-calendar__navigation__label:hover {
+    @apply text-white;
+    background: #4C42D7 !important;
+  }
+
+  .react-calendar__navigation__label {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial;
+  }
+}
+
+// .react-calendar__month-view__days {
+//   @apply gap-[5px];
+// }
+
+.react-calendar__tile.react-calendar__decade-view__years__year,
+.react-calendar__tile.react-calendar__year-view__months__month {
+  @apply py-5 rounded-5;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+.react-calendar__tile.react-calendar__month-view__days__day {
+  @apply transition rounded-full p-2;
+}
+
+.react-calendar__tile:hover,
+.react-calendar__tile.react-calendar__tile--hasActive.react-calendar__decade-view__years__year,
+.react-calendar__tile.react-calendar__tile--hasActive.react-calendar__year-view__months__month,
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__tile--active {
+  @apply text-white;
+  background: #4C42D7 !important;
+}
+
+// Table CSS
+table.advanced-table {
+  overflow-y: hidden !important;
+  overflow-x: scroll !important;
+}
+
+table.advanced-table thead,
+table.advanced-table tbody,
+table.advanced-table tr {
+  display: contents;
+}
+
+.resize-handle {
+  display: block;
+  position: absolute;
+  cursor: col-resize;
+  width: 10px;
+  height: 10px;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-right: 2px solid transparent;
+
+}
+
+.resize-handle:hover {
+  border-color: #8E9CB2;
+}
+
+.resize-handle.active {
+  border-color: #4C42D7;
+}
